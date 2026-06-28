@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renald Dylan Tiongson — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <!-- <span class="nav-logo"><span>▒</span> ar.dev</span> -->
+    <ul class="nav-links">
+      <li><a href="#hero">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Exp</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-hire">HIRE ME</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-main">
+        <div class="hero-badge">AVAILABLE FOR WORK</div>
+        <h1 class="hero-name">RENALD DYLAN TIONGSON<span class="cursor"></span></h1>
+        <p class="hero-role">SOFTWARE ENGINEER</p>
+        <p class="hero-desc">
+          Dynamic Software Engineer with 4 years of experience in designing, building,
+          and maintaining scalable software solutions across the full development
+          lifecycle. Proven ability to work in fast-paced environments, solve complex
+          technical problems, and contribute to high-impact projects. Skilled in modern
+          programming languages, software architecture, and agile development
+          practices. Eager to bring strong coding skills, collaborative mindset, and a drive
+          for innovation to a forward-thinking tech team
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-pixel primary">VIEW MY WORK</a>
+          <a href="#contact" class="btn-pixel outline">GET IN TOUCH</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+          <div class="profile-photo">
+              <img src="images/profile.jpg" alt="Profile Photo">
+          </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <div class="px-divider"></div>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">SKILLS</span>
+        <h2 class="sec-title">TECH STACK</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="skills-grid fade-in">
+
+        <div class="win skill-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div><div class="win-dot yel"></div><div class="win-dot grn"></div>
+            <span class="win-title">FRONTEND</span>
+          </div>
+          <div class="win-body">
+            <div class="skill-chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Javascript</span>
+              <span class="chip">AJAX</span>
+              <span class="chip">Bootstrap</span>
+              <span class="chip">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="win skill-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div><div class="win-dot yel"></div><div class="win-dot grn"></div>
+            <span class="win-title">BACKEND & DATABASE</span>
+          </div>
+          <div class="win-body">
+            <div class="skill-chips">
+              <span class="chip">PHP</span>
+              <span class="chip">Python</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">BigQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="win skill-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div><div class="win-dot yel"></div><div class="win-dot grn"></div>
+            <span class="win-title">FRAMEWORK</span>
+          </div>
+          <div class="win-body">
+            <div class="skill-chips">
+              <span class="chip">Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="win skill-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div><div class="win-dot yel"></div><div class="win-dot grn"></div>
+            <span class="win-title">CLOUD & DEVOPS</span>
+          </div>
+          <div class="win-body">
+            <div class="skill-chips">
+              <span class="chip">GOOGLE CLOUD PLATFORM</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Git</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <div class="px-divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">WORK</span>
+        <h2 class="sec-title">PROJECTS</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="projects-grid fade-in">
+
+        <div class="win proj-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div>
+            <div class="win-dot yel"></div>
+            <div class="win-dot grn"></div>
+            <span class="win-title">PROJECT_001.EXE</span>
+          </div>
+
+          <!-- CAROUSEL -->
+          <div class="proj-carousel">
+            <div class="carousel-track" id="carousel-001">
+              <img src="images/m2c-1.png" alt="M2C Screenshot 1" class="carousel-slide" />
+              <img src="images/m2c-2.png" alt="M2C Screenshot 2" class="carousel-slide" />
+              <img src="images/m2c-3.png" alt="M2C Screenshot 3" class="carousel-slide" />
+            </div>
+            <button class="carousel-btn carousel-prev" onclick="carouselMove('carousel-001', -1)">&#9664;</button>
+            <button class="carousel-btn carousel-next" onclick="carouselMove('carousel-001', 1)">&#9654;</button>
+            <div class="carousel-dots" id="dots-carousel-001">
+              <span class="carousel-dot active" onclick="carouselGo('carousel-001', 0)"></span>
+              <span class="carousel-dot" onclick="carouselGo('carousel-001', 1)"></span>
+              <span class="carousel-dot" onclick="carouselGo('carousel-001', 2)"></span>
+            </div>
+          </div>
+          <div class="win-body">
+            <div class="proj-num">001 /</div>
+            <div class="proj-type-badge">PRODUCT</div>
+            <div class="proj-name">SHELL METER 2 CASH (M2C)</div>
+            <div class="proj-desc">An end-to-end business workflow App that transforms a customer's electricity consumption into a completed financial transaction. It encompasses all activities from capturing energy usage through meter readings to generating accurate invoices, collecting payments, and reconciling customer accounts.</div>
+            <div class="proj-stack">
+              <span class="chip">Laravel</span>
+              <span class="chip">GOOGLE CLOUD PLATFORM</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">BigQuery</span>
+              <span class="chip">PHP</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Python</span>
+            </div>
+            <div class="proj-actions">
+              <a href="#" class="proj-btn code-btn" onclick="openNda(); return false;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .97-.31 3.18 1.17a10.9 10.9 0 0 1 5.8 0c2.2-1.48 3.17-1.17 3.17-1.17.63 1.58.24 2.74.12 3.03.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.08.78 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                </svg>
+                <span>CODE</span>
+              </a>
+              <a href="#" class="proj-btn demo-btn" onclick="openNda(); return false;">
+                LIVE DEMO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="win proj-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div>
+            <div class="win-dot yel"></div>
+            <div class="win-dot grn"></div>
+            <span class="win-title">PROJECT_002.EXE</span>
+          </div>
+
+          <!-- CAROUSEL -->
+          <div class="proj-carousel">
+            <div class="carousel-track" id="carousel-002">
+              <img src="images/ayos-agad-1.png" alt="Ayos Agad Screenshot 1" class="carousel-slide" />
+              <img src="images/ayos-agad-2.png" alt="Ayos Agad Screenshot 2" class="carousel-slide" />
+              <img src="images/ayos-agad-3.png" alt="Ayos Agad Screenshot 3" class="carousel-slide" />
+            </div>
+            <button class="carousel-btn carousel-prev" onclick="carouselMove('carousel-002', -1)">&#9664;</button>
+            <button class="carousel-btn carousel-next" onclick="carouselMove('carousel-002', 1)">&#9654;</button>
+            <div class="carousel-dots" id="dots-carousel-002">
+              <span class="carousel-dot active" onclick="carouselGo('carousel-002', 0)"></span>
+              <span class="carousel-dot" onclick="carouselGo('carousel-002', 1)"></span>
+              <span class="carousel-dot" onclick="carouselGo('carousel-002', 2)"></span>
+            </div>
+          </div>
+          <div class="win-body">
+            <div class="proj-num">002 /</div>
+            <div class="proj-type-badge">Personal Project</div>
+            <div class="proj-name">AYOS AGAD</div>
+            <div class="proj-desc">Ayos Agad is a full-stack home service marketplace that streamlines service booking, technician management, scheduling, and job tracking through an intuitive web platform. <br><br> Project is ongoing...</div>
+            <div class="proj-stack">
+              <span class="chip">Laravel</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">PHP</span>
+              <span class="chip">JavaScript</span>
+
+            </div>
+            <div class="proj-actions">
+              <a href="https://github.com/renaldtiongson/ayos-agad" target="_blank" class="proj-btn code-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .97-.31 3.18 1.17a10.9 10.9 0 0 1 5.8 0c2.2-1.48 3.17-1.17 3.17-1.17.63 1.58.24 2.74.12 3.03.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.08.78 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                </svg>
+                <span>CODE</span>
+              </a>
+              <a href="#" class="proj-btn demo-btn" onclick="openWip(); return false;">
+                LIVE DEMO
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <div class="px-divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">EXP</span>
+        <h2 class="sec-title">EXPERIENCE</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="exp-list fade-in">
+
+        <div class="win exp-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div><div class="win-dot yel"></div><div class="win-dot grn"></div>
+            <span class="win-title">JOB_001.LOG</span>
+          </div>
+          <div class="win-body">
+            <div class="exp-left">
+              <div class="exp-period">2022 — 2026<br/>Acaciasoft Corporation</div>
+            </div>
+            <div>
+              <div class="exp-role">SOFTWARE ENGINEER</div>
+              <ul class="exp-bullets">
+                <li>Leads a team of software engineers and business analysts to design and develop web applications and APIs.</li>
+                <li>Conducts thorough code reviews and enforced coding standards to uphold high code quality.</li>
+                <li>Collaborates closely with cross-functional teams to define and deliver new features, supporting the company's digital transformation initiatives.</li>
+                <li>Develops scalable solutions using Laravel Framework, ensuring smooth integration of front-end and back-end components.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="win exp-win">
+          <div class="win-bar">
+            <div class="win-dot red"></div><div class="win-dot yel"></div><div class="win-dot grn"></div>
+            <span class="win-title">JOB_002.LOG</span>
+          </div>
+          <div class="win-body">
+            <div class="exp-left">
+              <div class="exp-period">2019 — 2022<br/>Baguio City Science Foundation</div>
+            </div>
+            <div>
+              <div class="exp-role">COMPUTER TEACHER</div>
+              <ul class="exp-bullets">
+                <li>Prepares lesson plans tailored to students' educational needs and curriculum requirements.</li>
+                <li>Delivers engaging instruction in assigned subjects, fostering a conducive learning environment.</li>
+                <li>Provides basic troubleshooting support for school computers, ensuring smooth functionality to support classroom activities effectively</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="px-divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">CONTACT</span>
+        <h2 class="sec-title">GET IN TOUCH</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="contact-grid fade-in">
+        <div>
+          <h3 class="contact-heading">LET'S BUILD<br/>SOMETHING <span class="red">GREAT.</span></h3>
+          <p class="contact-sub">Open for mid to senior engineering roles, technical leadership opportunities, and interesting consulting engagements. If you're working on something hard, I'd love to hear about it.</p>
+          <div class="contact-links">
+            <a href="mailto:renaldtiongson@gmail.com" class="contact-link-btn">
+              <span class="contact-link-icon">@</span>
+              renaldtiongson@gmail.com
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="contact-link-btn">
+              <span class="contact-link-icon">GH</span>
+              https://github.com/renaldtiongson
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link-btn">
+              <span class="contact-link-icon">in</span>
+              https://www.linkedin.com/in/rdtiongson/
+            </a>
+          </div>
+        </div>
+        <div>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <label class="form-label" for="name">YOUR NAME</label>
+              <input class="form-input" type="text" id="name" placeholder="John Smith" />
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="email">EMAIL</label>
+              <input class="form-input" type="email" id="email" placeholder="you@company.com" />
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="message">MESSAGE</label>
+              <textarea class="form-textarea" id="message" placeholder="Tell me about the role or project..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">▶ SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo"></span>
+    <span class="footer-copy">© 2026 Renald Tiongson</span>
+    <div class="footer-links">
+      <a href="https://github.com/renaldtiongson" target="_blank" rel="noopener">GITHUB</a>
+      <a href="https://www.linkedin.com/in/rdtiongson/" target="_blank" rel="noopener">LINKEDIN</a>
+      <a href="mailto:renaldtiongson@gmail.com">EMAIL</a>
+    </div>
+  </footer>
+
+  <!-- NDA MODAL -->
+  <div class="modal-overlay" id="ndaModal">
+    <div class="modal-box">
+      <div class="modal-bar">
+        <div class="win-dot" style="background:#ff6b6b"></div>
+        <div class="win-dot" style="background:#ffd93d"></div>
+        <div class="win-dot" style="background:#6bcb77"></div>
+        <span class="modal-bar-title">ACCESS_DENIED.EXE</span>
+        <button class="modal-close-x" onclick="closeNda()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">🔒</div>
+        <div class="modal-heading">NDA PROTECTED</div>
+        <p class="modal-text">
+          This project is covered under a Non-Disclosure Agreement.
+          Source code and live demo cannot be shared publicly.
+          Feel free to reach out if you'd like to discuss it.
+        </p>
+        <div class="modal-divider"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" onclick="closeNda()">[ OK ]</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WIP MODAL -->
+  <div class="modal-overlay" id="wipModal">
+    <div class="modal-box">
+      <div class="modal-bar modal-bar--wip">
+        <div class="win-dot" style="background:#ff6b6b"></div>
+        <div class="win-dot" style="background:#ffd93d"></div>
+        <div class="win-dot" style="background:#6bcb77"></div>
+        <span class="modal-bar-title">DEPLOY_STATUS.EXE</span>
+        <button class="modal-close-x" onclick="closeWip()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">🚧</div>
+        <div class="modal-heading">NOT YET DEPLOYED</div>
+        <p class="modal-text">
+          This project is currently in development and has not been deployed to a live environment yet.
+          Stay tuned — it's coming soon!
+        </p>
+        <div class="modal-divider"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn modal-btn--wip" onclick="closeWip()">[ OK ]</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ SENT!';
+    btn.style.background = '#06D6A0';
+    btn.style.color = '#1A1A1A';
+    setTimeout(() => {
+      btn.textContent = '▶ SEND MESSAGE';
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+    }, 2500);
+  }
+
+  function openNda() {
+    document.getElementById('ndaModal').classList.add('open');
+  }
+
+  function closeNda() {
+    document.getElementById('ndaModal').classList.remove('open');
+  }
+
+  // Close when clicking the dark backdrop
+  document.getElementById('ndaModal').addEventListener('click', function(e) {
+    if (e.target === this) closeNda();
+  });
+
+  // Close with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeNda();
+  });
+
+  function openWip() {
+    document.getElementById('wipModal').classList.add('open');
+  }
+
+  function closeWip() {
+    document.getElementById('wipModal').classList.remove('open');
+  }
+
+  document.getElementById('wipModal').addEventListener('click', function(e) {
+    if (e.target === this) closeWip();
+  });
+
+
+  // ── Carousel ──
+const carouselState = {};
+
+function carouselGo(id, index) {
+  const track = document.getElementById(id);
+  const slides = track.querySelectorAll('.carousel-slide');
+  const total = slides.length;
+  if (!carouselState[id]) carouselState[id] = 0;
+  carouselState[id] = (index + total) % total;
+  track.style.transform = `translateX(-${carouselState[id] * 100}%)`;
+
+  // update dots
+  const dots = document.querySelectorAll(`#dots-${id} .carousel-dot`);
+  dots.forEach((d, i) => d.classList.toggle('active', i === carouselState[id]));
+}
+
+function carouselMove(id, dir) {
+  if (!carouselState[id]) carouselState[id] = 0;
+  carouselGo(id, carouselState[id] + dir);
+}
+
+
+
+</script>
