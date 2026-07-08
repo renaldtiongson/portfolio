@@ -537,35 +537,31 @@ function carouselMove(id, dir) {
 
 // Initialize EmailJS
 
-const config = await fetch('/api/config').then(res => res.json());
+async function handleSubmit(event) {
+    event.preventDefault();
 
-emailjs.init({
-    publicKey: config.publicKey,
-});
+    if (!emailConfig) {
+        alert("Configuration is still loading.");
+        return;
+    }
 
-const form = document.getElementById("contact-form");
-const status = document.getElementById("status");
+    const form = document.getElementById("contact-form");
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    try {
+        await emailjs.sendForm(
+            emailConfig.serviceId,
+            emailConfig.templateId,
+            form
+        );
 
-    status.textContent = "Sending...";
-
-    emailjs.sendForm(
-        config.serviceId,
-        config.templateId,
-        form
-    )
-    .then(() => {
-        status.textContent = "Message sent successfully!";
+        alert("Message sent!");
         form.reset();
-    })
-    .catch((error) => {
-        console.error(error);
-        status.textContent = "Failed to send message.";
-    });
-});
 
+    } catch (error) {
+        console.error(error);
+        alert("Failed to send message.");
+    }
+}
 
 
 </script>
