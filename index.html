@@ -451,6 +451,31 @@
     </div>
   </div>
 
+  <!-- SENT MODAL -->
+  <div class="modal-overlay" id="sentModal">
+    <div class="modal-box">
+      <div class="modal-bar" style="border-bottom-color:#06D6A0">
+        <div class="win-dot" style="background:#ff6b6b"></div>
+        <div class="win-dot" style="background:#ffd93d"></div>
+        <div class="win-dot" style="background:#6bcb77"></div>
+        <span class="modal-bar-title">MESSAGE_SENT.EXE</span>
+        <button class="modal-close-x" onclick="closeSent()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">✅</div>
+        <div class="modal-heading" style="color:#06D6A0">MESSAGE SENT</div>
+        <p class="modal-text">
+          Thanks for reaching out! Your message has been delivered.
+          I'll get back to you as soon as possible.
+        </p>
+        <div class="modal-divider"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" style="background:#06D6A0;color:#1A1A1A;border-color:#06D6A0" onclick="closeSent()">[ OK ]</button>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 </html>
@@ -482,7 +507,11 @@
 
   // Close with Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeNda();
+    if (e.key === 'Escape') {
+      closeNda();
+      closeWip();
+      closeSent();
+    }
   });
 
   function openWip() {
@@ -495,6 +524,18 @@
 
   document.getElementById('wipModal').addEventListener('click', function(e) {
     if (e.target === this) closeWip();
+  });
+
+  function openSent() {
+    document.getElementById('sentModal').classList.add('open');
+  }
+
+  function closeSent() {
+    document.getElementById('sentModal').classList.remove('open');
+  }
+
+  document.getElementById('sentModal').addEventListener('click', function(e) {
+    if (e.target === this) closeSent();
   });
 
 
@@ -540,7 +581,7 @@ async function handleSubmit(event) {
             form
         );
 
-        alert("Message sent!");
+        openSent();
         form.reset();
 
     } catch (error) {
