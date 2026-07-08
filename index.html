@@ -342,7 +342,7 @@
           </div>
         </div>
         <div>
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form" onsubmit="handleSubmit(event)">
             <div class="form-row">
                 <label class="form-label" for="name">YOUR NAME</label>
                 <input
@@ -466,20 +466,6 @@
   }, { threshold: 0.08 });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = '✓ SENT!';
-    btn.style.background = '#06D6A0';
-    btn.style.color = '#1A1A1A';
-    setTimeout(() => {
-      btn.textContent = '▶ SEND MESSAGE';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 2500);
-  }
 
   function openNda() {
     document.getElementById('ndaModal').classList.add('open');
