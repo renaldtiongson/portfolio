@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
 </head>
 <body>
 
@@ -338,21 +342,48 @@
           </div>
         </div>
         <div>
-          <form class="contact-form" onsubmit="handleSubmit(event)">
+          <form id="contact-form" class="contact-form">
             <div class="form-row">
-              <label class="form-label" for="name">YOUR NAME</label>
-              <input class="form-input" type="text" id="name" placeholder="John Smith" />
+                <label class="form-label" for="name">YOUR NAME</label>
+                <input
+                    class="form-input"
+                    type="text"
+                    id="name"
+                    name="from_name"
+                    placeholder="John Smith"
+                    required
+                />
             </div>
+
             <div class="form-row">
-              <label class="form-label" for="email">EMAIL</label>
-              <input class="form-input" type="email" id="email" placeholder="you@company.com" />
+                <label class="form-label" for="email">EMAIL</label>
+                <input
+                    class="form-input"
+                    type="email"
+                    id="email"
+                    name="reply_to"
+                    placeholder="you@company.com"
+                    required
+                />
             </div>
+
             <div class="form-row">
-              <label class="form-label" for="message">MESSAGE</label>
-              <textarea class="form-textarea" id="message" placeholder="Tell me about the role or project..."></textarea>
+                <label class="form-label" for="message">MESSAGE</label>
+                <textarea
+                    class="form-textarea"
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about the role or project..."
+                    required
+                ></textarea>
             </div>
-            <button type="submit" class="form-submit">▶ SEND MESSAGE</button>
-          </form>
+
+            <button type="submit" class="form-submit">
+                ▶ SEND MESSAGE
+            </button>
+        </form>
+
+        <p id="status"></p>
         </div>
       </div>
     </div>
@@ -501,6 +532,39 @@ function carouselMove(id, dir) {
   if (!carouselState[id]) carouselState[id] = 0;
   carouselGo(id, carouselState[id] + dir);
 }
+
+
+
+// Initialize EmailJS
+
+const config = await fetch('/api/config').then(res => res.json());
+
+emailjs.init({
+    publicKey: config.publicKey,
+});
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    status.textContent = "Sending...";
+
+    emailjs.sendForm(
+        config.serviceId,
+        config.templateId,
+        form
+    )
+    .then(() => {
+        status.textContent = "Message sent successfully!";
+        form.reset();
+    })
+    .catch((error) => {
+        console.error(error);
+        status.textContent = "Failed to send message.";
+    });
+});
 
 
 
